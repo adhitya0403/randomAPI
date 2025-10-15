@@ -15,6 +15,8 @@ server.use(express.static("public"));
 server.use(cors());
 server.use(express.json());
 
+server.get('/favicon.ico', (req, res) => res.sendStatus(204));
+
 server.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
