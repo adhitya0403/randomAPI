@@ -6,7 +6,8 @@ import {
   getRandomQuote,
   getRandomLowerCaseQuote,
   getRandomUpperCaseQuote,
-  getRandomMixedCaseQuote 
+  getRandomMixedCaseQuote,
+  getRandomBlindQuote
 } from "../controllers/quotesController.js";
 
 const quoteRouter = express.Router();
@@ -18,5 +19,7 @@ quoteRouter.get("/random", getRandomQuote);
 quoteRouter.get("/random/lower", getRandomLowerCaseQuote);
 quoteRouter.get("/random/upper", getRandomUpperCaseQuote);
 quoteRouter.get("/random/mixed", getRandomMixedCaseQuote);
+quoteRouter.get("/random/short", getRandomBlindQuote);
+
 
 export default quoteRouter;
